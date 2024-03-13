@@ -113,7 +113,7 @@
 @media only screen and (max-width: 768px) {
     .navbar {
         font-size: 2vw;
-        padding: 0;
+        background-color: white;
     }
 
     .title {
@@ -135,11 +135,12 @@
         justify-content: center;
         width: 100vw;
         height: 11vh;
+        cursor: pointer;
         background-color: white;
     }
 
     .navbar-logo {
-        width: 100vw;
+        width: 80vw;
         text-align: center;
     }
 
@@ -150,6 +151,7 @@
 
      .navbar-menu {
         display: none;
+        height: 0;
     } 
 
     .bar {
@@ -161,7 +163,6 @@
     .navbar-menu.active {
         position: fixed;
         top: 10vh;
-        right: 0;
         background-color: white;
         width: 100%;
         height: 30vh;
@@ -170,8 +171,31 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        transition: 0.3s ease-in;
+        animation: menuDropdown 1s ease forwards;
         z-index: 2;
+    }
+
+    .navbar-menu:not(.active) {
+        animation: menuDropup 0.5s ease forwards;
+    }
+    
+    @keyframes menuDropup {
+        from {
+            height: auto;
+        }
+        to {
+            height: 0;
+        }
+    }
+
+    @keyframes menuDropdown {
+        from {
+            height: 0;
+        }
+
+        to {
+            height: 30vh;
+        }
     }
 
     .navbar-menu li a {
