@@ -9,7 +9,6 @@
     scroll-behavior: smooth;
 }
 
-
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -22,7 +21,7 @@
 }
 
 .navbar-logo img {
-    height: 60px; 
+    height: 60px;
 
 }
 
@@ -62,31 +61,51 @@
     flex-direction: column;
 }
 
-.who {
-    width: 100vw;
-    height: 100vh;
-    background-color: #277342;
-}
-
-.title {
+.begin .title {
     font-size: 4.8vw;
     width: 85vw;
     color: white;
     font-weight: bold;
 }
 
-.text {
+.begin .text {
     color: white;
     font-size: 1.5vw;
     width: 35vw;
     text-align: center;
 }
 
-.content {
+.begin .content {
     width: 85vw;
 }
 
-.menu{
+.who {
+    width: 100vw;
+    height: 100vh;
+    background: url(assets/patinhas.png);
+    background-color: #277342;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.who .title {
+    width: 100vw;
+    font-size: 4vw;
+    font-weight: bold;
+
+}
+
+.who .text {
+    width: 100vw;
+    font-size: 2.5vw;
+    padding: 70px;
+}
+
+.menu {
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -95,11 +114,11 @@
     z-index: 1;
 }
 
-    .bar {
+.bar {
     height: 2px;
-    width: 5%;
+    width: 90px;
     background-color: #fff;
-    margin: 0.5% 2%;
+    margin: 2px 20px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -116,13 +135,13 @@
         background-color: white;
     }
 
-    .title {
+    .begin .title {
         width: 80vw;
         font-size: 8vw;
         text-align: center;
     }
-    
-    .text {
+
+    .begin .text {
         width: 80vw;
         font-size: 4.3vw;
         text-align: center;
@@ -149,15 +168,22 @@
         margin-top: 1.5vw;
     }
 
-     .navbar-menu {
-        display: none;
-        height: 0;
-    } 
-
     .bar {
         background-color: black;
         width: 5vw;
 
+    }
+
+    .navbar-menu {
+        position: fixed;
+        top: 10vh;
+        background-color: white;
+        width: 100%;
+        height: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
 
     .navbar-menu.active {
@@ -166,35 +192,41 @@
         background-color: white;
         width: 100%;
         height: 30vh;
-        overflow-y: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        animation: menuDropdown 1s ease forwards;
-        z-index: 2;
+        animation: menuDropdown 0.8s ease forwards;
     }
 
-    .navbar-menu:not(.active) {
-        animation: menuDropup 0.5s ease forwards;
+    .navbar-menu.inactive {
+        width: 100%;
+        height: 0;
+        animation: menuDropup 0.8s ease forwards;
     }
-    
-    @keyframes menuDropup {
-        from {
-            height: auto;
-        }
-        to {
-            height: 0;
-        }
-    }
+
 
     @keyframes menuDropdown {
         from {
             height: 0;
+            opacity: 0;
         }
 
         to {
             height: 30vh;
+            opacity: 1;
+        }
+    }
+
+    @keyframes menuDropup {
+        from {
+            height: 30vh;
+            opacity: 1;
+        }
+
+        to {
+            height: 0;
+            opacity: 0;
         }
     }
 
@@ -203,13 +235,13 @@
     }
 
     @media only screen and (max-width: 480px) {
-        .title {
+        .begin .title {
             width: 85vw;
             font-size: 10vw;
             text-align: center;
         }
-        
-        .text {
+
+        .begin .text {
             width: 85vw;
             font-size: 6vw;
             text-align: center;
