@@ -92,15 +92,14 @@
     flex-direction: column;
     width: 30px;
     display: none;
-    z-index: 4;
+    z-index: 1;
 }
 
-.linha1, .linha2, .linha3 {
+    .bar {
     height: 2px;
-    width: 75%;
+    width: 5%;
     background-color: #fff;
-    margin: 5%;
-    right: -30%;
+    margin: 0.5% 2%;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -113,8 +112,8 @@
 
 @media only screen and (max-width: 768px) {
     .navbar {
-        overflow: hidden;
         font-size: 2vw;
+        padding: 0;
     }
 
     .title {
@@ -130,18 +129,36 @@
     }
 
     .menu {
+        position: fixed;
         display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100vw;
+        height: 11vh;
+        background-color: white;
     }
 
     .navbar-logo {
-        width: 75vw;
+        width: 100vw;
+        text-align: center;
     }
 
-    .navbar-menu {
+    .navbar-logo img {
+        margin-left: 3vw;
+        margin-top: 1.5vw;
+    }
+
+     .navbar-menu {
         display: none;
+    } 
+
+    .bar {
+        background-color: black;
+        width: 5vw;
+
     }
 
-    .navbar-menu.active  {
+    .navbar-menu.active {
         position: fixed;
         top: 10vh;
         right: 0;
