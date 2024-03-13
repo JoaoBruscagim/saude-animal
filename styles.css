@@ -50,7 +50,7 @@
 }
 
 .navbar-logo {
-    z-index: 4;
+    z-index: 3;
 }
 
 .navbar-menu {
@@ -109,6 +109,7 @@
 
 .begin .content {
     width: 85vw;
+    z-index: 1;
 }
 
 .who {
@@ -143,7 +144,6 @@
     flex-direction: column;
     width: 30px;
     display: none;
-    z-index: 1;
 }
 
 .bar {
@@ -165,6 +165,7 @@
     .navbar {
         font-size: 2vw;
         background-color: white;
+        z-index: 2;
     }
 
     .begin .title {
@@ -179,6 +180,18 @@
         text-align: center;
     }
 
+    .who .title {
+        width: 100vw;
+        font-size: 8vw;
+        text-align: center;
+    }
+
+    .who .text {
+        width: 100vw;
+        font-size: 3.8vw;
+        text-align: center;
+    }
+
     .menu {
         position: fixed;
         display: flex;
@@ -188,11 +201,13 @@
         height: 11vh;
         cursor: pointer;
         background-color: white;
+        z-index: 3;
     }
 
     .navbar-logo {
         width: 80vw;
         text-align: center;
+        z-index: 4;
     }
 
     .navbar-logo img {
