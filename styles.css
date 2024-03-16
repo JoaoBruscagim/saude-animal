@@ -168,6 +168,10 @@
         z-index: 2;
     }
 
+    .begin {
+        background-position: 50% ;
+    }
+
     .begin .title {
         width: 80vw;
         font-size: 8vw;
