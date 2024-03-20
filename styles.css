@@ -191,6 +191,7 @@
 
 .services .cards .card .text {
     font-size: 1.5vw;
+    font-weight: bold;
 }
 
 .services .cards .card:hover {
