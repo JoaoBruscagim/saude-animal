@@ -9,11 +9,16 @@
     scroll-behavior: smooth;
 }
 
+.onTop {
+    background-color: rgba(0, 0, 0, 0.418);
+    backdrop-filter: blur(15px);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
 .navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: transparent;
     width: 100%;
     position: fixed;
     font-size: 1.3vw;
@@ -22,6 +27,7 @@
     animation-delay: 2.5s;
     transition: opacity 0.5s ease;
     opacity: 0;
+    z-index: 2;
 }
 
 @keyframes initializing {
@@ -129,13 +135,68 @@
     width: 100vw;
     font-size: 4vw;
     font-weight: bold;
-
 }
 
 .who .text {
     width: 100vw;
     font-size: 2.5vw;
     padding: 70px;
+}
+
+.services {
+    width: 100vw;
+    height: 100vh;
+    background: url(assets/patinhas2.png);
+    background-color: #ffbc49;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.services .title {
+    width: 100vw;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.services .cards {
+    width: 100vw;
+    height: 60vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; 
+    padding: 30px;
+}
+
+.services .cards .card {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 15vw;
+    height: 100%;
+    border: 5px solid white;
+    background-color: rgba(0, 0, 0, 0.363);
+    border-radius: 15px;
+    font-size: 2vw;
+    margin: 50px;
+}
+
+.services .cards .card .text {
+    font-size: 1.5vw;
+}
+
+.services .cards .card:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .menu {
@@ -164,7 +225,6 @@
 @media only screen and (max-width: 768px) {
     .navbar {
         font-size: 2vw;
-        background-color: white;
         z-index: 2;
     }
 
@@ -185,15 +245,60 @@
     }
 
     .who .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100vw;
+        height: 20vh;
         font-size: 8vw;
         text-align: center;
     }
 
     .who .text {
+        height: 80vh;
         width: 100vw;
         font-size: 3.8vw;
         text-align: center;
+    }
+
+    .services .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 25vh;
+        font-size: 8vw;
+        font-weight: bold;
+    }
+    
+    .services .cards {
+        display: block; 
+        width: 100vw;
+        height: 75vh;
+        margin-top: 2%;
+    }
+    
+    .services .cards .card {
+        display: flex; 
+        flex-direction: row;
+        width: 80vw;
+        height: 20%;
+        border: 5px solid white;
+        background-color: rgba(0, 0, 0, 0.363);
+        border-radius: 15px;
+        font-size: 2vw;
+        overflow: hidden;
+        margin-top: 5px;
+    }
+
+    .services .cards .card img{
+        width: 50%;
+    }
+    
+    .services .cards .card .text {
+        font-size: 5vw;
+        width: 70%;
+        font-weight: bold;
     }
 
     .menu {
@@ -202,9 +307,9 @@
         align-items: flex-end;
         justify-content: center;
         width: 100vw;
-        height: 11vh;
+        height: 12vh;
+        box-shadow: rgba(89, 91, 94, 0.2) 0px 8px 24px;
         cursor: pointer;
-        background-color: white;
         z-index: 3;
     }
 
@@ -226,9 +331,8 @@
     }
 
     .navbar-menu {
-        position: fixed;
+        position: absolute;
         top: 10vh;
-        background-color: white;
         width: 100%;
         height: 0;
         display: flex;
@@ -239,8 +343,9 @@
 
     .navbar-menu.active {
         position: fixed;
-        top: 10vh;
-        background-color: white;
+        top: 11vh;
+        background-color: transparent;
+        backdrop-filter: blur(15px);
         width: 100%;
         height: 30vh;
         display: flex;
@@ -295,6 +400,18 @@
         .begin .text {
             width: 85vw;
             font-size: 6vw;
+            text-align: center;
+        }
+
+        .who .title {
+            width: 100vw;
+            font-size: 10vw;
+            text-align: center;
+        }
+
+        .who .text {
+            width: 100vw;
+            font-size: 5vw;
             text-align: center;
         }
     }
