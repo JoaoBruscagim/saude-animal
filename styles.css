@@ -245,21 +245,32 @@
         text-align: center;
     }
 
+    .who .content {
+        width: 100%;
+        height: 100%;
+    }
+
     .who .title {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100vw;
-        height: 20vh;
-        font-size: 8vw;
+        height: 25%;
+        font-size: 10vw;
         text-align: center;
     }
 
     .who .text {
-        height: 80vh;
+        height: 75%;
         width: 100vw;
-        font-size: 3.8vw;
+        font-size: 4.8vw;
         text-align: center;
+    }
+
+    .services .content {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
     }
 
     .services .title {
@@ -267,29 +278,30 @@
         justify-content: center;
         align-items: center;
         width: 100vw;
-        height: 25vh;
+        height: 25%;
         font-size: 8vw;
-        font-weight: bold;
+        text-align: center; 
     }
     
     .services .cards {
-        display: block; 
-        width: 100vw;
-        height: 75vh;
-        margin-top: 2%;
+        display: block;
+        width: 100%;
+        height: 75%;
     }
     
     .services .cards .card {
         display: flex; 
         flex-direction: row;
-        width: 80vw;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
         height: 20%;
         border: 5px solid white;
         background-color: rgba(0, 0, 0, 0.363);
         border-radius: 15px;
         font-size: 2vw;
         overflow: hidden;
-        margin-top: 5px;
+        margin-top: -25px;
     }
 
     .services .cards .card img{
@@ -297,8 +309,8 @@
     }
     
     .services .cards .card .text {
-        font-size: 5vw;
-        width: 70%;
+        font-size: 4vw;
+        width: 75%;
         font-weight: bold;
     }
 
@@ -389,31 +401,83 @@
 
     .navbar-menu li a {
         color: black;
-    }
-
-    @media only screen and (max-width: 480px) {
-        .begin .title {
-            width: 85vw;
-            font-size: 10vw;
-            text-align: center;
-        }
-
-        .begin .text {
-            width: 85vw;
-            font-size: 6vw;
-            text-align: center;
-        }
-
-        .who .title {
-            width: 100vw;
-            font-size: 10vw;
-            text-align: center;
-        }
-
-        .who .text {
-            width: 100vw;
-            font-size: 5vw;
-            text-align: center;
-        }
-    }
+    } 
 }
+
+@media only screen and (max-width: 480px) {
+    .begin .title {
+        width: 85vw;
+        font-size: 10vw;
+        text-align: center;
+    }
+
+    .begin .text {
+        width: 85vw;
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    .who .content {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .who .title {
+        width: 100vw;
+        height: 15vh;
+        font-size: 10vw;
+        text-align: center;
+        margin-top: 20%;
+    }
+
+    .who .text {
+        width: 100vw;
+        height: 100vh;
+        font-size: 5vw;
+        text-align: center;
+    
+    }
+
+    .services .content {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .services .title {
+        width: 100vw;
+        height: 15vh;
+        font-size: 10vw;
+        text-align: center;
+        margin-top: 20%;
+    }
+    
+    .services .cards {
+        width: 100%;
+    }
+    
+    .services .cards .card {
+        display: flex; 
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border: 5px solid white;
+        background-color: rgba(0, 0, 0, 0.363);
+        border-radius: 15px;
+        font-size: 2vw;
+        margin: 15px auto;
+        overflow: hidden;
+    }
+
+    .services .cards .card img{
+        width: 50%;
+    }
+    
+    .services .cards .card .text {
+        font-size: 4vw;
+        width: 70%;
+        font-weight: bold;
+    }
+} 
