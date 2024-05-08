@@ -9,6 +9,28 @@
     scroll-behavior: smooth;
 }
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #5c5c5c #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #5c5c5c;
+    border-radius: 15px;
+    border: 3px none #000000;
+  }
+
 .onTop {
     background-color: rgba(0, 0, 0, 0.418);
     backdrop-filter: blur(15px);
