@@ -9,27 +9,24 @@
     scroll-behavior: smooth;
 }
 
-/* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
+* {
     scrollbar-width: thin;
     scrollbar-color: #5c5c5c #ffffff;
-  }
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 10px;
-  }
+}
 
-  *::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: #ffffff;
-  }
+}
 
-  *::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: #5c5c5c;
     border-radius: 15px;
     border: 3px none #000000;
-  }
+}
 
 .onTop {
     background-color: rgba(0, 0, 0, 0.418);
@@ -57,19 +54,23 @@
     0% {
         opacity: 0;
     }
+
     25% {
         opacity: 0.25;
     }
+
     50% {
         opacity: 0.5;
     }
+
     75% {
         opacity: 0.75;
     }
+
     100% {
         opacity: 1;
     }
-    
+
 }
 
 .navbar-logo img {
@@ -188,23 +189,21 @@
 
 .services .cards {
     width: 100vw;
-    height: 60vh;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden; 
+    height: 65vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden;
     padding: 30px;
 }
 
 .services .cards .card {
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column;
     width: 15vw;
-    height: 100%;
+    height: 90%;
     border: 5px solid white;
     background-color: rgba(0, 0, 0, 0.363);
     border-radius: 15px;
@@ -257,7 +256,7 @@
 
 .where img:hover {
     transform: scale(1.05);
-    transition: 0.5s ease-in-out ; 
+    transition: 0.5s ease-in-out;
 }
 
 .where .display {
@@ -312,6 +311,31 @@
     margin: 2px 20px;
 }
 
+
+@media only screen and (max-width: 1430px) {
+    .image img {
+        width: 70%;
+    }
+}
+
+
+@media only screen and (max-width: 1140px) {
+    .image img {
+        width: 70%;
+    }
+
+    .services .cards {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+    }
+
+
+    .services .cards .card {
+        width: 80%;
+    }
+}
+
+
 @media only screen and (max-width: 1024px) {
     .navbar {
         font-size: 1.8vw;
@@ -327,7 +351,7 @@
     }
 
     .begin {
-        background-position: 50% ;
+        background-position: 50%;
     }
 
     .begin .title {
@@ -377,37 +401,32 @@
         width: 100vw;
         height: 25%;
         font-size: 8vw;
-        text-align: center; 
+        text-align: center;
     }
-    
-    .services .cards {
-        display: block;
-        width: 100%;
-        height: 75%;
-    }
-    
+
     .services .cards .card {
-        display: flex; 
+        display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 85%;
-        height: 20%;
+        height: 80%;
         border: 5px solid white;
         background-color: rgba(0, 0, 0, 0.363);
         border-radius: 15px;
         font-size: 2vw;
         overflow: hidden;
         margin-top: -25px;
+        text-align: center;
     }
 
-    .services .cards .card img{
+    .services .cards .card img {
         width: 50%;
     }
-    
+
     .services .cards .card .text {
-        font-size: 4vw;
-        width: 75%;
+        font-size: 1rem;
+        width: 100%;
         font-weight: bold;
     }
 
@@ -483,7 +502,8 @@
         background-color: white;
         backdrop-filter: blur(15px);
         width: 100%;
-        height: 30vh;;
+        height: 30vh;
+        ;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -529,7 +549,25 @@
 
     .navbar-menu li a {
         color: black;
-    } 
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .services .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .services .cards .card {
+        width: 95%;
+        height: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .services .cards .card .text {
+        font-size: 0.9rem;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -564,7 +602,7 @@
         height: 100vh;
         font-size: 5vw;
         text-align: center;
-    
+
     }
 
     .services .content {
@@ -580,13 +618,13 @@
         text-align: center;
         margin-top: 20%;
     }
-    
+
     .services .cards {
         width: 100%;
     }
-    
+
     .services .cards .card {
-        display: flex; 
+        display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -599,13 +637,13 @@
         overflow: hidden;
     }
 
-    .services .cards .card img{
+    .services .cards .card img {
         width: 50%;
     }
-    
+
     .services .cards .card .text {
         font-size: 4vw;
         width: 70%;
         font-weight: bold;
     }
-} 
+}
