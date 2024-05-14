@@ -225,6 +225,14 @@
     cursor: pointer;
 }
 
+.image {
+    width: 100%;
+}
+
+.image img {
+    width: 90%;
+}
+
 .where {
     width: 100vw;
     height: 100vh;
@@ -316,49 +324,51 @@
     margin: 2px 20px;
 }
 
-.footer{
-    background:#ffffff;
-    padding:30px 0px;
-    text-align:center;
-    }
-    
-    .footer .row{
-    width:100%;
-    margin:1% 0%;
-    padding:0.6% 0%;
-    color:gray;
-    font-size:0.8em;
-    }
-    
-    .footer .row a{
-    text-decoration:none;
-    color:gray;
-    transition:0.5s;
-    }
-    
-    .footer .row a:hover{
-    color:#fff;
-    }
-    
-    .footer .row ul{
-    width:100%;
-    }
-    
-    .footer .row ul li{
-    display:inline-block;
-    margin:0px 30px;
-    }
-    
-    .footer .row a i{
-    font-size:2em;
-    margin:0% 1%;
-    }
+.footer {
+    background: #ffffff;
+    padding: 30px 0px;
+    text-align: center;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
 
 
 @media only screen and (max-width: 1430px) {
     .image img {
         width: 70%;
     }
+
+
 }
 
 
@@ -376,11 +386,15 @@
         width: 80%;
     }
 
+    .services .cards .card .text {
+        font-size: 1.8rem;
+        overflow: hidden;
+    }
 
     .image {
-        width: 30%;
+        width: 40%;
+        overflow: hidden;
     }
-    
 }
 
 
@@ -396,22 +410,59 @@
     .where .text {
         font-size: 1.8rem;
     }
+
+    .who .title {
+        margin-top: 5%;
+        font-size: 4rem;
+    }
+
+    .who .text {
+        font-size: 1.8rem;
+        overflow-y: hidden;
+    }
+
+    .services .title {
+        font-size: 4rem;
+    }
+
+    .services .cards .card .text{
+        font-size: 1.8rem;
+        overflow: hidden;
+    }
+
+    .where .title {
+        font-size: 4rem;
+    }
+
+    .where .text {
+        font-size: 1.9rem;
+    }
+
+    .contact .title {
+        font-size: 4rem;
+        margin-top: -2%;
+    }
+
+    .contact .text {
+        font-size: 1.8rem;
+    }
 }
 
+@media only screen and (max-width: 720px) {
+    .footer {
+        text-align: center;
+        padding: 5%;
+    }
 
-@media only screen and (max-width: 720px){
-    .footer{
-        text-align:center;
-        padding:5%;
-        }
-        .footer .row ul li{
-        display:block;
-        margin:10px 0px;
-        text-align:center;
-        }
-        .footer .row a i{
-        margin:0% 3%;
-        }
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: center;
+    }
+
+    .footer .row a i {
+        margin: 0% 3%;
+    }
 }
 
 
@@ -450,7 +501,8 @@
         height: 20%;
         font-size: 10vw;
         text-align: center;
-        margin-bottom: -25px;
+        margin-top: 7%;
+        margin-bottom: -5%;
     }
 
     .who .text {
@@ -458,6 +510,7 @@
         width: 100vw;
         font-size: 2rem;
         text-align: center;
+        overflow-y: hidden;
     }
 
     .services .content {
@@ -496,6 +549,7 @@
         width: 30%;
         margin: 0.5rem;
     }
+
     .services .cards .card img {
         width: 100%;
     }
@@ -525,7 +579,7 @@
     .where .title {
         font-size: 4rem;
         height: 25%;
-        margin-top: 10%;
+        margin-top: 12%;
         margin-bottom: -25%;
     }
 
@@ -542,20 +596,23 @@
         height: auto;
     }
 
-    .contact .display {
+
+
+    .contact .content {
         width: 100vw;
         height: 100vh;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
-    .contact .title{
+    .contact .title {
         font-size: 4rem;
-        margin-top: -2%;
+        height: 40%;
+        margin-top: 5%;
     }
 
     .contact .text {
-        height: 75%;
+        height: 30%;
         font-size: 2rem;
     }
 
@@ -573,7 +630,7 @@
         box-shadow: rgba(89, 91, 94, 0.2) 0px 8px 24px;
         cursor: pointer;
         z-index: 3;
-        background-color: transparent;
+        background-color: white;
     }
 
     .navbar-logo {
@@ -601,15 +658,16 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        background-color: white;
     }
 
     .navbar-menu.active {
         position: fixed;
+        top: 10vh;
         background-color: white;
         backdrop-filter: blur(15px);
         width: 100%;
         height: 30vh;
-        ;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -659,7 +717,7 @@
 }
 
 @media only screen and (max-width: 660px) {
-    .who .text{
+    .who .text {
         font-size: 1.8rem;
     }
 
@@ -675,6 +733,10 @@
 
     .services .cards .card img {
         width: 70%;
+    }
+
+    .contact .text {
+        margin-top: -20%;
     }
 
 }
@@ -754,6 +816,7 @@
         font-size: 1.4rem;
     }
 
+    
     .where .title {
         font-size: 10vw;
         margin-bottom: -25%;
@@ -764,10 +827,10 @@
     }
 
     .where img {
-        width: 90%;
+        width: 80%;
         margin-bottom: 2.8rem;
     }
-    
+
 
     .contact .title {
         font-size: 10vw;
@@ -799,7 +862,7 @@
         height: 15vh;
         font-size: 11vw;
         text-align: center;
-        margin-top: 20%;
+        margin-top: 15%;
         margin-bottom: -20%;
     }
 
@@ -822,7 +885,7 @@
         height: 15vh;
         font-size: 10vw;
         text-align: center;
-        margin-top: 20%;
+        margin-top: 15%;
         margin-bottom: -10%;
     }
 
@@ -855,7 +918,7 @@
 
     .where .title {
         font-size: 10vw;
-        margin-top: 20%;
+        margin-top: 15%;
         margin-bottom: -50%;
     }
 
@@ -867,9 +930,14 @@
         width: 100%;
     }
 
+    .contact .title {
+        margin-top: 15%;
+        font-size: 10vw;
+        height: 45%;
+    }
+
     .contact .text {
+        height: 50%;
         font-size: 1.8rem;
     }
-    
-
 }
