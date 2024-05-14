@@ -210,6 +210,8 @@
     border-radius: 15px;
     font-size: 2vw;
     margin: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow-y: hidden;
 }
 
 .services .cards .card .text {
@@ -370,11 +372,15 @@
         margin: 0 auto;
     }
 
-
     .services .cards .card {
         width: 80%;
     }
 
+
+    .image {
+        width: 30%;
+    }
+    
 }
 
 
@@ -694,7 +700,7 @@
 
     .who .title {
         width: 100vw;
-        height: 15vh;
+        height: 10vh;
         font-size: 10vw;
         text-align: center;
         margin-top: 20%;
@@ -745,17 +751,124 @@
     }
 
     .services .cards .card .text {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .where .title {
+        font-size: 10vw;
+        margin-bottom: -25%;
+    }
+
+    .where .text {
+        font-size: 1.6rem;
+    }
+
+    .where img {
+        width: 90%;
+        margin-bottom: 2.8rem;
+    }
+    
+
+    .contact .title {
+        font-size: 10vw;
+    }
+
+}
+
+@media only screen and (max-width: 360px) {
+    .begin .title {
+        width: 85vw;
+        font-size: 11vw;
+        text-align: center;
+    }
+
+    .begin .text {
+        width: 85vw;
+        font-size: 7vw;
+        text-align: center;
+    }
+
+    .who .content {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .who .title {
+        width: 100vw;
+        height: 15vh;
+        font-size: 11vw;
+        text-align: center;
+        margin-top: 20%;
+        margin-bottom: -20%;
+    }
+
+    .who .text {
+        width: 100vw;
+        height: 100vh;
+        font-size: 5.2vw;
+        text-align: center;
+
+    }
+
+    .services .content {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .services .title {
+        width: 100vw;
+        height: 15vh;
+        font-size: 10vw;
+        text-align: center;
+        margin-top: 20%;
+        margin-bottom: -10%;
+    }
+
+    .services .cards {
+        width: 100%;
+    }
+
+    .services .cards .card {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border: 5px solid white;
+        background-color: rgba(0, 0, 0, 0.363);
+        border-radius: 15px;
+        font-size: 2vw;
+        margin: 15px auto;
+        overflow: hidden;
+    }
+
+    .services .cards .card img {
+        width: 100%;
+    }
+
+    .services .cards .card .text {
+        font-size: 1.4rem;
     }
 
 
     .where .title {
         font-size: 10vw;
+        margin-top: 20%;
         margin-bottom: -50%;
+    }
+
+    .where .text {
+        font-size: 1.5rem;
     }
 
     .where img {
         width: 100%;
+    }
+
+    .contact .text {
+        font-size: 1.8rem;
     }
     
 
