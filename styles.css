@@ -953,3 +953,16 @@
         overflow: hidden;
     }
 }
+
+@media only screen and (max-width: 300px) {
+
+    .where .title {
+        margin-bottom: -40%;
+    }
+
+    .where .text {
+        font-size: 1.4rem;
+        overflow: hidden;
+    }
+    
+}
