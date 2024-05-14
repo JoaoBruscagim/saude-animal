@@ -553,6 +553,10 @@
         font-size: 2rem;
     }
 
+    .navbar {
+        position: fixed;
+    }
+
     .menu {
         position: fixed;
         display: flex;
@@ -584,7 +588,7 @@
     }
 
     .navbar-menu {
-        position: sticky;
+        position: fixed;
         top: 10vh;
         width: 100%;
         display: none;
@@ -744,6 +748,15 @@
         font-size: 1.5rem;
     }
 
+
+    .where .title {
+        font-size: 10vw;
+        margin-bottom: -50%;
+    }
+
+    .where img {
+        width: 100%;
+    }
     
 
 }
