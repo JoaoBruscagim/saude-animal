@@ -491,6 +491,7 @@
     .who .content {
         width: 100%;
         height: 100%;
+        overflow: hidden;
     }
 
     .who .title {
@@ -508,9 +509,9 @@
     .who .text {
         height: 80%;
         width: 100vw;
-        font-size: 2rem;
+        font-size: 1.8rem;
         text-align: center;
-        overflow-y: hidden;
+        overflow: hidden;
     }
 
     .services .content {
@@ -535,7 +536,7 @@
         justify-content: center;
         align-items: center;
         width: 85%;
-        height: 80%;
+        height: 90%;
         border: 5px solid white;
         background-color: rgba(0, 0, 0, 0.363);
         border-radius: 15px;
@@ -569,7 +570,7 @@
 
     .where .display {
         width: 100vw;
-        height: 100vh;
+        height: 85vh;
         display: flex;
         flex-direction: column-reverse;
         overflow: hidden;
@@ -579,8 +580,12 @@
     .where .title {
         font-size: 4rem;
         height: 25%;
-        margin-top: 12%;
-        margin-bottom: -25%;
+        margin-bottom: -10%;
+    }
+
+
+    .where .text-column{
+        height: 95%;
     }
 
     .where .text {
@@ -591,8 +596,8 @@
     }
 
     .where img {
-        padding: 2rem;
-        width: 50%;
+        object-fit: contain;
+        width: 60%;
         height: auto;
     }
 
@@ -624,7 +629,7 @@
         align-items: flex-end;
         justify-content: center;
         width: 100vw;
-        height: 12vh;
+        height: 15vh;
         box-shadow: rgba(89, 91, 94, 0.2) 0px 8px 24px;
         cursor: pointer;
         z-index: 3;
@@ -665,7 +670,7 @@
         background-color: white;
         backdrop-filter: blur(15px);
         width: 100%;
-        height: 30vh;
+        height: 50vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -836,7 +841,7 @@
 
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 375px) {
     .begin .title {
         width: 85vw;
         font-size: 11vw;
@@ -920,19 +925,26 @@
     }
 
     .where .display { 
-        height: auto;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .where .text-column {
+        height: 95%;
     }
 
     .where .text {
         font-size: 1.5rem;
-        height: 40%;
-
+        width: 100%;
     }
 
     .where img {
-        width: 100%;
-        overflow-y: hidden;
+        width: 95%;
+        height: 100%;
+        object-fit: contain;
     }
+
+
 
     .contact .title {
         margin-top: 15%;
@@ -947,13 +959,24 @@
 }
 
 @media only screen and (max-width: 320px) {
+    .services .cards .card .text {
+        font-size: 1.2rem;
+    }
 
     .where .title {
         margin-bottom: -40%;
     }
 
-    .where .text {
-        font-size: 1.4rem;
+    .where .text-column {
+        margin-top: -10%;
+        width: 100%;
         overflow: hidden;
     }
+
+    .where .text {
+        font-size: 1.2rem;
+        overflow: hidden;
+    }
+
+    
 }
